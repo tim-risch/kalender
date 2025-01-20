@@ -1,64 +1,86 @@
 <!DOCTYPE html>
     <html lang="de">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tim's Kalender</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+            /* 
+            @font-face{
+            font-family: "January Night";
+                src: url('\assets\January Night.ttf') format('ttf');
+                font-weight: normal;
+                font-style: normal;
+                src: url(January Night.ttf);            
+                rti
+            }
+            */
             body{
                 background-color: black;
             }
-        
-            #headline{
-                width: 90%;
-                height: 150px;
-                position: relative;
-                display: auto;
-                font-family: sans-serif;
-                color:blue;
+            h1{
+                color: rgb(0, 0, 255);
+                font-family: "Goldman", Helvetica, sans-serif;
+                font-size: 1.3cm;
+               position: absolute;
+               top: 15px;
+               left: 2cm;
             }
-            #header{
-                color: rgb(25, 0, 255);
+            h2{
+                color: rgb(0, 0, 255);
+                font-family: "Goldman", Helvetica, sans-serif;
                 font-size: 1cm;
-                top: 20px;
-                left: 40px;
+                position: absolute;
+                top: 80px;
+                left: 2cm;
             }
-            .content{
-                padding: 20px;
-                color: blue;
+            #jan{
+                color:blue;
+                font-family: "Goldman", Helvetica, sans-serif;
+                font-size: 0.8cm;
+                position: absolute;
+                top: 145px;
+                left: 20cm;
             }
-            span{
-                font-weight: bold;
-                color:blue
+            #lf{
+                color: rgb(0, 0, 255);
+                font-family: "Goldman", Helvetica, sans-serif;
+                font-size: 0.65cm;
+                position: absolute;
+                right: 1.4cm;
+                bottom: 0.1cm;
             }
-            p{
-                color: rgb(25, 0, 255); 
-                font-size: small;
-                font-family: sans-serif;
+            #jan-pic{
+                height: 275px;
+                position: absolute;
+                top: 200px;
+                left: 2cm;
+                border-width: 5px;
+                border-style: solid;
+                border-left-color: blue;
+                border-top-color: rgb(0, 0, 255);
+                border-right-color: rgb(132, 0, 255);
+                border-bottom-color: rgb(132, 0, 255);
             }
-            .p1{
-                color: rgb(25, 0, 255); 
-                font-size: large;
+            #lf-pic{
+                height: 50px;
+                position: absolute;
+                bottom: 0.05cm;
+                right: 2cm;
             }
         </style>
     </head>
     <body>
-        <div id="headline">
-            <h1 id="header">Tim's Kalender</h1>
-            <h1 style=" font-size: large;" >2025</h1>
-        </div>
-        <div >
-            <p >
-                abc
-            <p style= "font-size:larger;">
-                Januar
-            </p>
-
-            <p class="p1">
-                icu ufibpj
-            </p>
-
-        </div>
-        <div class="content">
+        <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic">
+        <img src="wir_viere_logo-removebg-preview.png" id="lf-pic">
+        <h1>TIM'S KALENDER</h1>
+        <h2>2025</h2>
+        <p id="jan">Januar</p>
+        <p id="lf">LAYER    FOUR</p>
     </body>
 </html>
