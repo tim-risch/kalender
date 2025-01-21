@@ -44,16 +44,24 @@
                 font-family: "Goldman", Helvetica, sans-serif;
                 font-size: 0.8cm;
                 position: absolute;
-                top: 145px;
-                left: 20cm;
+                top: 36px;
+                left: 19cm;
             }
-            #lf{
+            #four{
                 color: rgb(0, 0, 255);
                 font-family: "Goldman", Helvetica, sans-serif;
                 font-size: 0.65cm;
                 position: absolute;
-                right: 1.4cm;
-                bottom: 0.1cm;
+                right: 1.3cm;
+                bottom: 0cm;
+            }
+            #layer{
+                color: rgb(0, 0, 255);
+                font-family: "Goldman", Helvetica, sans-serif;
+                font-size: 0.65cm;
+                position: absolute;
+                right: 4.55cm;
+                bottom: 0cm;
             }
             #jan-pic{
                 height: 275px;
@@ -64,23 +72,63 @@
                 border-style: solid;
                 border-left-color: blue;
                 border-top-color: rgb(0, 0, 255);
-                border-right-color: rgb(132, 0, 255);
-                border-bottom-color: rgb(132, 0, 255);
+                border-right-color: rgb(172, 0, 0);
+                border-bottom-color: rgb(172, 0, 0);
             }
-            #lf-pic{
+            #jan-pic:active{
+                height: 277px;
+                position: absolute;
+                left: 1.98cm;
+                top: 198px;
+            }
+                #lf-pic{
                 height: 50px;
                 position: absolute;
-                bottom: 0.05cm;
-                right: 2cm;
+                bottom: 0.35cm;
+                right: 3.25cm;
             }
+            .arrow:hover{
+                background-color: rgba(128, 128, 128, 0.281);
+                border-radius: 25px;
+            }
+            .arrow:active {
+                color: rgb(172, 0, 0);
+                transform: translateY(4px);
+            }
+            .arrow{
+                font-size: 75px;
+                background-color: transparent;
+                border: none;
+                color:blue;
+            }
+
+            #arrow-up{
+                position:absolute;
+                top: 36px;
+                right: 16cm;
+            }
+            
+            #arrow-down{
+                position:absolute;
+                bottom: 36px;
+                right: 16cm;
+            }
+
         </style>
     </head>
     <body>
-        <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic">
+        <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" onclick="alert('Quelle: sendungen-januar-100~_v-gseagaleriexl.jpg')">
         <img src="wir_viere_logo-removebg-preview.png" id="lf-pic">
         <h1>TIM'S KALENDER</h1>
         <h2>2025</h2>
         <p id="jan">Januar</p>
-        <p id="lf">LAYER    FOUR</p>
+        <p id="layer">LAYER</p>
+        <p id="four">FOUR</p>
+
+        <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
+        <button id="arrow-down" class="arrow" onKlick="buttonDown()">&#11206;</button>
+        <!-- <button id="arrow-down" class="arrow" onclick="alert('No function, click on OK to get back')">&#11206;</button> -->
+        <script type="text/javascript" src="funtcion.js"></script>
+
     </body>
 </html>
