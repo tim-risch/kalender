@@ -44,8 +44,8 @@
                 font-family: "Goldman", Helvetica, sans-serif;
                 font-size: 0.8cm;
                 position: absolute;
-                top: 36px;
-                left: 19cm;
+                top: 23px;
+                left: 17.8cm;
             }
             #four{
                 color: rgb(0, 0, 255);
@@ -71,9 +71,9 @@
                 border-width: 5px;
                 border-style: solid;
                 border-left-color: blue;
-                border-top-color: rgb(0, 0, 255);
-                border-right-color: rgb(172, 0, 0);
-                border-bottom-color: rgb(172, 0, 0);
+                border-top-color: blue;
+                border-right-color: red;
+                border-bottom-color: red;
             }
             #jan-pic:active{
                 height: 277px;
@@ -92,7 +92,7 @@
                 border-radius: 25px;
             }
             .arrow:active {
-                color: rgb(172, 0, 0);
+                color: red;
                 transform: translateY(4px);
             }
             .arrow{
@@ -104,16 +104,35 @@
 
             #arrow-up{
                 position:absolute;
-                top: 36px;
+                top: 20px;
                 right: 16cm;
             }
             
             #arrow-down{
                 position:absolute;
-                bottom: 36px;
+                bottom: 20px;
                 right: 16cm;
             }
-
+            .grid-container{
+                height: 17.5cm;
+                width: 31cm;
+                position: absolute;
+                right: 2cm;
+                bottom: 4cm;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto;
+                grid-template-rows: 37px 37px 95.57px 37px 95.57px 37px 95.57px 37px 95.57px 37px 95.57px;
+                padding: 10px;
+            }
+            .grid-container > div{
+                border-style: solid;
+                border-color:blue;
+                border-width: 2px;
+                text-align: center;
+                padding:1.25px 0;
+                font-size: 30px;
+                font-family:"Goldman"
+            }
         </style>
     </head>
     <body>
@@ -124,6 +143,85 @@
         <p id="jan">Januar</p>
         <p id="layer">LAYER</p>
         <p id="four">FOUR</p>
+        <div class="grid-container">
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; border-left-style: solid; border-left-color: blue; border-left-width: 4px;">MO</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">DI</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">MI</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">DO</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">FR</div>
+            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">SA</div>
+            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px;  border-right-style: solid; border-right-color: blue; border-right-width: 4px;">SO</div>
+            <div style="color: #376497; border-left-style: solid; border-left-color: blue; border-left-width: 4px;">30</div>
+            <div style="color: #376497">31</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">1</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">2</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">3</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">4</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">5</div>
+            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">6</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">7</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">8</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">9</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">10</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">11</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">12</div>
+            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">13</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">14</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">15</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">16</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">17</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">18</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">19</div>
+            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">20</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">21</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">22</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">23</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">24</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">25</div>
+            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">26</div>
+            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">27</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">28</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">29</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">30</div>
+            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">31</div>
+            <div style="color: #854C4C">1</div>
+            <div style="color: #854C4C">2</div>
+            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
         <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
         <button id="arrow-down" class="arrow" onKlick="buttonDown()">&#11206;</button>
