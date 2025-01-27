@@ -76,19 +76,23 @@
                 border-bottom-color: red;
             }
             #jan-pic:hover{
-                transition-duration: 0.3s;
+                border-color: rgba(128, 128, 128, 0.281);
+                transition-duration: 0.2s;
                 height: 277px;
+                position: absolute;
+                left: 1.95cm;
+                top: 199px;
             }
-            #jan-pic:active{
+            /* #jan-pic:active{
                 height: 277px;
                 position: absolute;
                 left: 1.98cm;
                 top: 198px;
-            }
+            } */
             #lf-pic{
                 height: 50px;
                 position: absolute;
-                bottom: 0.35cm;
+                bottom: 0.36cm;
                 right: 3.25cm;
             }
             .arrow:hover{
@@ -142,9 +146,13 @@
                 text-align: center;
                 padding: 0px 0;
                 font-size: 30px;
-                font-family:"Goldman"
+                font-family:"Goldman";
             }
-            .alert {
+            .grid-container > div:hover{
+                transition-duration: 0.075s;
+                background-color:rgba(128, 128, 128, 0.281)
+            }
+            .popup{
                 padding: 20px;
                 background-color: #3936f4;
                 color: white;
@@ -164,25 +172,14 @@
             .closebtn:hover {
                 color: black;
             }
+            .popup .show {
+                visibility: visible;
+            }
         </style>
     </head>
     <body>
-        <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" onclick="myFunction()">
-        <div id="myDIV">
-            This is my DIV element.
-        </div>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myDIV");
-                    if (x.style.display === "none") {
-                    x.style.display = "block";
-                    } else {
-                    x.style.display = "none";
-                    }
-            }
-        </script>
-
+        <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" onclick="picture()">
+        <script type="text/javascript" src="funtcion.js"></script>
 
         <img src="wir_viere_logo-removebg-preview.png" id="lf-pic">
         <h1>TIM'S KALENDER</h1>
@@ -191,15 +188,15 @@
         <p id="layer">LAYER</p>
         <p id="four">FOUR</p>
         <div class="grid-container">
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; border-left-style: solid; border-left-color: blue; border-left-width: 4px;">MO</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">DI</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">MI</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">DO</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">FR</div>
-            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px;">SA</div>
-            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px;  border-right-style: solid; border-right-color: blue; border-right-width: 4px;">SO</div>
-            <div style="color: #376497; border-left-style: solid; border-left-color: blue; border-left-width: 4px;">30</div>
-            <div style="color: #376497">31</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; border-left-style: solid; border-left-color: blue; border-left-width: 4px; background-color: rgba(0, 0, 0, 0)">MO</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">DI</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">MI</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">DO</div>
+            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">FR</div>
+            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">SA</div>
+            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px;  border-right-style: solid; border-right-color: blue; border-right-width: 4px; background-color: rgba(0, 0, 0, 0)">SO</div>
+            <div style="color: #376497; border-left-style: solid; border-left-color: blue; border-left-width: 4px; background-color: rgba(0, 0, 0, 0)">30</div>
+            <div style="color: #376497; background-color: rgba(0, 0, 0, 0)">31</div>
             <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">1</div>
             <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">2</div>
             <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">3</div>
@@ -259,8 +256,8 @@
             <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">29</div>
             <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">30</div>
             <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">31</div>
-            <div style="color: #854C4C">1</div>
-            <div style="color: #854C4C; border-right-style: solid; border-right-color: blue; border-right-width: 4px;">2</div>
+            <div style="color: #854C4C; background-color: rgba(0, 0, 0, 0)">1</div>
+            <div style="color: #854C4C; border-right-style: solid; border-right-color: blue; border-right-width: 4px; background-color: rgba(0, 0, 0, 0)">2</div>
             <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
             <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
             <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
@@ -271,11 +268,11 @@
         </div>
 
         <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
-        <button id="arrow-down" class="arrow" onKlick="buttonDown()">&#11206;</button>
+        <button id="arrow-down" class="arrow" onclick="buttonDown()">&#11206;</button>
         <!-- <button id="arrow-down" class="arrow" onclick="alert('No function, click on OK to get back')">&#11206;</button> -->
         <script type="text/javascript" src="funtcion.js"></script>
 
-        <div class="alert" style="font-family: Goldman;">
+        <div class="popup" style="font-family: Goldman; position: relative; z-index: 1;">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
             <strong>Quelle:</strong> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
           </div>
