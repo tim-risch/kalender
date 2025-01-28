@@ -10,16 +10,7 @@
             @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
-            /* 
-            @font-face{
-            font-family: "January Night";
-                src: url('\assets\January Night.ttf') format('ttf');
-                font-weight: normal;
-                font-style: normal;
-                src: url(January Night.ttf);            
-                rti
-            }
-            */
+            
             body{
                 background-color: black;
             }
@@ -153,11 +144,16 @@
                 background-color:rgba(128, 128, 128, 0.281)
             }
             .popup{
-                padding: 20px;
-                background-color: #3936f4;
-                color: white;
+                
             }
-
+            .popup .popupthing{
+                padding: 20px;
+                color: white;
+                visibility: hidden; 
+            }
+            .popup .show {
+                visibility: visible;
+            }
             .closebtn {
                 margin-left: 15px;
                 color: white;
@@ -168,18 +164,31 @@
                 cursor: pointer;
                 transition: 0.3s;
             }
-
             .closebtn:hover {
                 color: black;
             }
-            .popup .show {
-                visibility: visible;
-            }
+            
         </style>
     </head>
     <body>
-        <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" onclick="picture()">
-        <script type="text/javascript" src="funtcion.js"></script>
+        <div class="popup" onclick="picture()">
+            <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" >
+            <span class="popupthing" id="popup1">
+            <div style="font-family: Goldman; position: relative; z-index: 1; background-color: #3936f47a; width: 50cm; height: 2cm;">
+            <span class="closebtn">&times;</span> 
+            <strong>Quelle:</strong><br> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
+          </div></span>
+        </div>
+            <script>
+                function picture(){
+                    var popup = document.getElementById("popup1");
+                    popup.classList.toggle("show");
+                }
+                /* function button(){
+                    var popup = document.getElementByClass("popupthing");
+                    popup.classList.remove("show");
+                } */
+                </script>
 
         <img src="wir_viere_logo-removebg-preview.png" id="lf-pic">
         <h1>TIM'S KALENDER</h1>
@@ -268,15 +277,11 @@
         </div>
 
         <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
-        <button id="arrow-down" class="arrow" onclick="buttonDown()">&#11206;</button>
+        <button id="arrow-down" class="arrow" onKlick="buttonDown()">&#11206;</button>
         <!-- <button id="arrow-down" class="arrow" onclick="alert('No function, click on OK to get back')">&#11206;</button> -->
         <script type="text/javascript" src="funtcion.js"></script>
 
-        <div class="popup" style="font-family: Goldman; position: relative; z-index: 1;">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            <strong>Quelle:</strong> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
-          </div>
+        
           
-
     </body>
 </html>
