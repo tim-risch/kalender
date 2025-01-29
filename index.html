@@ -143,13 +143,10 @@
                 transition-duration: 0.075s;
                 background-color:rgba(128, 128, 128, 0.281)
             }
-            .popup{
-                
-            }
             .popup .popupthing{
                 padding: 20px;
                 color: white;
-                visibility: hidden; 
+                visibility: hidden;
             }
             .popup .show {
                 visibility: visible;
@@ -162,20 +159,19 @@
                 font-size: 22px;
                 line-height: 20px;
                 cursor: pointer;
-                transition: 0.3s;
             }
             .closebtn:hover {
-                color: black;
+                color: rgb(255, 0, 0);
             }
             
         </style>
     </head>
     <body>
-        <div class="popup" onclick="picture()">
-            <img src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" >
+        <div class="popup">
+            <img onclick="picture()" src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" >
             <span class="popupthing" id="popup1">
-            <div style="font-family: Goldman; position: relative; z-index: 1; background-color: #3936f47a; width: 50cm; height: 2cm;">
-            <span class="closebtn">&times;</span> 
+            <div style="font-family: Goldman; position: relative; left: 0.7cm; z-index: 1; background-color: #3936f47a; width: 49cm; height: 2cm;">
+            <!--<span class="closebtn">&times;</span> -->
             <strong>Quelle:</strong><br> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
           </div></span>
         </div>
@@ -277,11 +273,11 @@
         </div>
 
         <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
-        <button id="arrow-down" class="arrow" onKlick="buttonDown()">&#11206;</button>
+        <button id="arrow-down" class="arrow" onclick="buttonDown()">&#11206;</button>
         <!-- <button id="arrow-down" class="arrow" onclick="alert('No function, click on OK to get back')">&#11206;</button> -->
         <script type="text/javascript" src="funtcion.js"></script>
 
-        
-          
     </body>
 </html>
+
+<!-- oncontextmenu="return false" -->
