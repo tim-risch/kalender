@@ -142,14 +142,13 @@ h1{
     /* width: 95vw;
     height: 95vh; */
     grid-template-areas:
-        "hd hd month arrowUp arrowUp"
-        "year year  calendar calendar calendar"
-        "image image  calendar calendar calendar"
-        "image image  calendar calendar calendar"
-        "todo todo  calendar calendar calendar"
-        "todo todo  calendar calendar calendar"
-        "todo todo  calendar calendar calendar"
-        "todo todo   arrowDown arrowDown  logo";
+        "hd  month arrowUp arrowUp"
+        "year   calendar calendar calendar"
+        "image   calendar calendar calendar"
+        "image  calendar calendar calendar"
+        "todo   calendar calendar calendar"
+        "todo   calendar calendar calendar"
+        "todo   arrowDown arrowDown  logo";
         padding: 10px;
         gap: 10px;
     /* height: 17.5cm;
