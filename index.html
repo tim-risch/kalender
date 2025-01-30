@@ -1,282 +1,196 @@
 <!DOCTYPE html>
     <html lang="de">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tim's Kalender</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
-            
-            body{
-                background-color: black;
-            }
-            h1{
-                color: rgb(0, 0, 255);
-                font-family: "Goldman", Helvetica, sans-serif;
-                font-size: 1.3cm;
-               position: absolute;
-               top: 15px;
-               left: 2cm;
-            }
-            h2{
-                color: rgb(0, 0, 255);
-                font-family: "Goldman", Helvetica, sans-serif;
-                font-size: 1cm;
-                position: absolute;
-                top: 80px;
-                left: 2cm;
-            }
-            #jan{
-                color:blue;
-                font-family: "Goldman", Helvetica, sans-serif;
-                font-size: 0.8cm;
-                position: absolute;
-                top: 57.5px;
-                left: 17.56cm;
-            }
-            #four{
-                color: rgb(0, 0, 255);
-                font-family: "Goldman", Helvetica, sans-serif;
-                font-size: 0.65cm;
-                position: absolute;
-                right: 1.3cm;
-                bottom: 0cm;
-            }
-            #layer{
-                color: rgb(0, 0, 255);
-                font-family: "Goldman", Helvetica, sans-serif;
-                font-size: 0.65cm;
-                position: absolute;
-                right: 4.55cm;
-                bottom: 0cm;
-            }
-            #jan-pic{
-                height: 275px;
-                position: absolute;
-                top: 200px;
-                left: 2cm;
-                border-width: 5px;
-                border-style: solid;
-                border-left-color: blue;
-                border-top-color: blue;
-                border-right-color: red;
-                border-bottom-color: red;
-            }
-            #jan-pic:hover{
-                border-color: rgba(128, 128, 128, 0.281);
-                transition-duration: 0.2s;
-                height: 277px;
-                position: absolute;
-                left: 1.95cm;
-                top: 199px;
-            }
-            /* #jan-pic:active{
-                height: 277px;
-                position: absolute;
-                left: 1.98cm;
-                top: 198px;
-            } */
-            #lf-pic{
-                height: 50px;
-                position: absolute;
-                bottom: 0.36cm;
-                right: 3.25cm;
-            }
-            .arrow:hover{
-                background-color: rgba(128, 128, 128, 0.281);
-                border-radius: 25px;
-                transition-duration: 0.25s;
-            }
-            .arrow:active {
-                color: red;
-                transition-duration: 0s;
-            }
-            .arrow{
-                font-size: 75px;
-                background-color: transparent;
-                border: none;
-                color:blue;
-            }
-            #arrow-up{
-                position:absolute;
-                top: 20px;
-                right: 16.83cm;
-            }
-            #arrow-up:active {
-                transform: translateY(-4px);
-                transition-duration: 0.1s;
-            }
-            #arrow-down{
-                position:absolute;
-                bottom: 20px;
-                right: 16.83cm;
-            }
-            #arrow-down:active {
-                transform: translateY(4px);
-                transition-duration: 0.1s;
-            }
-            .grid-container{
-                height: 17.5cm;
-                width: 31cm;
-                position: absolute;
-                right: 2cm;
-                bottom: 3.995cm;
-                display: grid;
-                grid-template-columns: auto auto auto auto auto auto auto;
-                grid-template-rows: 37px 37px 95.57px 37px 95.57px 37px 95.57px 37px 95.57px 37px 95.57px;
-                padding: 10px;
-            }
-            .grid-container > div{
-                border-style: solid;
-                border-color:blue;
-                border-width: 2px;
-                text-align: center;
-                padding: 0px 0;
-                font-size: 30px;
-                font-family:"Goldman";
-            }
-            .grid-container > div:hover{
-                transition-duration: 0.075s;
-                background-color:rgba(128, 128, 128, 0.281)
-            }
-            .popup .popupthing{
-                padding: 20px;
-                color: white;
-                visibility: hidden;
-            }
-            .popup .show {
-                visibility: visible;
-            }
-            .closebtn {
-                margin-left: 15px;
-                color: white;
-                font-weight: bold;
-                float: right;
-                font-size: 22px;
-                line-height: 20px;
-                cursor: pointer;
-            }
-            .closebtn:hover {
-                color: rgb(255, 0, 0);
-            }
-            
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="popup">
-            <img onclick="picture()" src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" >
-            <span class="popupthing" id="popup1">
-            <div style="font-family: Goldman; position: relative; left: 0.7cm; z-index: 1; background-color: #3936f47a; width: 49cm; height: 2cm;">
-            <!--<span class="closebtn">&times;</span> -->
-            <strong>Quelle:</strong><br> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
-          </div></span>
-        </div>
-            <script>
-                function picture(){
-                    var popup = document.getElementById("popup1");
-                    popup.classList.toggle("show");
-                }
-                /* function button(){
-                    var popup = document.getElementByClass("popupthing");
-                    popup.classList.remove("show");
-                } */
-                </script>
+        <div id="grid-container">
+            <!-- <div class="popup">
+                <img onclick="picture()" src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" >
+                <span class="popupthing" id="popup1">
+                    <div id="quelle">
+                        <span class="closebtn">&times;</span>
+                        <strong>Quelle:</strong><br> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
+                    </div>
+                </span>
+            </div> -->
+            <!-- <script>
+            function button(){
+                var popup = document.getElementByClass("popupthing");
+                popup.classList.remove("show");
+            } 
+            </script> -->
 
-        <img src="wir_viere_logo-removebg-preview.png" id="lf-pic">
-        <h1>TIM'S KALENDER</h1>
-        <h2>2025</h2>
-        <div id="jan" style="width:4.5cm; background-color: rgba(0, 0, 255, 0.350); border-left-style:solid; border-left-color:blue; border-left-width: 4px; text-align: center;">Januar</div>
-        <p id="layer">LAYER</p>
-        <p id="four">FOUR</p>
-        <div class="grid-container">
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; border-left-style: solid; border-left-color: blue; border-left-width: 4px; background-color: rgba(0, 0, 0, 0)">MO</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">DI</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">MI</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">DO</div>
-            <div style="color: blue; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">FR</div>
-            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px; background-color: rgba(0, 0, 0, 0)">SA</div>
-            <div style="color: red; border-top-style: solid; border-top-color:blue; border-top-width: 4px;  border-right-style: solid; border-right-color: blue; border-right-width: 4px; background-color: rgba(0, 0, 0, 0)">SO</div>
-            <div style="color: #376497; border-left-style: solid; border-left-color: blue; border-left-width: 4px; background-color: rgba(0, 0, 0, 0)">30</div>
-            <div style="color: #376497; background-color: rgba(0, 0, 0, 0)">31</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">1</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">2</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">3</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">4</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350); border-right-style: solid; border-right-color: blue; border-right-width: 4px;">5</div>
-            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">6</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">7</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">8</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">9</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">10</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">11</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350); border-right-style: solid; border-right-color: blue; border-right-width: 4px;">12</div>
-            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">13</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">14</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">15</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">16</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">17</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350)">18</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350); border-right-style: solid; border-right-color: blue; border-right-width: 4px;">19</div>
-            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">20</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">21</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">22</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">23</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.35);">24</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350); border-style: solid; border-color: red; border-width: 3px;">25</div>
-            <div style="color: red; background-color:rgba(0, 0, 255, 0.350); border-right-style: solid; border-right-color: blue; border-right-width: 4px;">26</div>
-            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">27</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">28</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">29</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">30</div>
-            <div style="color: blue; background-color:rgba(0, 0, 255, 0.350)">31</div>
-            <div style="color: #854C4C; background-color: rgba(0, 0, 0, 0)">1</div>
-            <div style="color: #854C4C; border-right-style: solid; border-right-color: blue; border-right-width: 4px; background-color: rgba(0, 0, 0, 0)">2</div>
-            <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-            <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-            <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-            <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-            <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-            <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-            <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
-        </div>
+            <h1 id="hd">TIM'S KALENDER</h1>
+            <h2 id="year">2025</h2>
+            <div id="month" >Januar</div>
+            <div id="logo">
+                <p class="logoSchrift">LAYER</p>
+                <img src="wir_viere_logo-removebg-preview.png" >
+                <p class="logoSchrift">FOUR</p>
+            </div>
+            <div id="arrowUp">
+                <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
+            </div>
+            <div id="calendar">
+                <table>
+                    <tr>
 
-        <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
-        <button id="arrow-down" class="arrow" onclick="buttonDown()">&#11206;</button>
+                        <th class="monday">MO</th>
+                        <th class="weekday">DI</th>
+                        <th class="weekday">MI</th> 
+                        <th class="weekday">DO</th>
+                        <th class="weekday">FR</th>
+                        <th class="weekend">SA</th>
+                        <th class="weekend">SO</th>
+                    </tr>
+                    <tr>
+                        <td class="outOfMonth">30</td>
+                        <td class="outOFMonth2">31</td>
+                        <!-- style="color: blue; background-color:rgba(0, 0, 255, 0.350)" -->
+                        <td class="weekday">1</td>
+                        <td class="secondOfMonth">2</td>
+                        <td class="secondOfMonth">3</td>
+                        <td class="saturdayTD">4</td>
+                        <td class="sundayTD" >5</td>
+                    </tr>
+                    <tr>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                    </tr>
+                     <!-- <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div> 
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div>-->
+                     <!-- <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">6</div> -->
+                     <tr>
+                         <td class="weekday">6</td>
+                         <td class="weekday">7</td>
+                         <td class="weekday">8</td>
+                         <td class="weekday">9</td>
+                         <td class="weekday">10</td>
+                         <td class="saturdayTD">11</td>
+                         <td class="sundayTD">12</td>
+                         <td style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div> -->
+                    <tr>        
+                        <td class="weekday">13</td>
+                        <td class="weekday">14</td>
+                        <td class="weekday">15</td>
+                        <td class="weekday">16</td>
+                        <td class="weekday">17</td>
+                        <td class="saturdayTD">18</td>
+                        <td class="sundayTD">19</td>
+    	            </tr>
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div> -->
+                    <tr>
+
+                        <td class="weekday">20</td>
+                        <td class="weekday">21</td>
+                        <td class="weekday">22</td>
+                        <td class="weekday">23</td>
+                        <td class="weekday">24</td>
+                        <td class="saturdayTD">25</td>
+                        <td class="sundayTD">26</td>
+                    </tr> 
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <td style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></td> -->
+                     <!-- <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div> -->
+                     <tr>
+                         <td class="weekday">27</td>
+                         <td class="weekday">28</td>
+                         <td class="weekday">29</td>
+                         <td class="weekday">30</td>
+                         <td class="weekday">31</td>
+                         <td class="outOfMonthSaturday">1</td>
+                         <td class="outOfMonthSunday">2</td>
+                    </tr>
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <td style="border-left-style: solid; border-left-color: blue; border-left-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></td> -->
+                     <!-- <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>                 </div> -->
+                </table>
+            </div>
+          
+            <div id="arrowDown" >
+                <button id="arrow-down" class="arrow" onclick="buttonDown()">&#11206;</button>
+            </div>
+            <div id="todo"></div>
+            
+        </div>
         <!-- <button id="arrow-down" class="arrow" onclick="alert('No function, click on OK to get back')">&#11206;</button> -->
         <script type="text/javascript" src="funtcion.js"></script>
-
     </body>
 </html>
 
