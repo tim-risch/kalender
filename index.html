@@ -1,75 +1,201 @@
+
+
 <!DOCTYPE html>
+<!-- GitHub von marten:
+     https://github.com/meissnerM224/Kalender -->
     <html lang="de">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tim's Kalender</title>
-        <style>
-            body{
-                background-color: black;
-            }
-        
-            #headline{
-                width: 90%;
-                height: 150px;
-                position: relative;
-                top: 40px;
-                left: 60px;
-                display: auto;
-                font-family: sans-serif;
-                color:blue;
-            }
-            #header{
-                height: 50px;
-                margin: 5%;
-                color: rgb(25, 0, 255);
-                font-family: sans-serif;
-            }
-            .content{
-                background-color:black;
-                padding: 20px;
-                color: blue  ;
-            }
-            span{
-                font-weight: bold;
-                color:blue
-            }
-            p{
-                color: rgb(25, 0, 255); 
-                font-size: small;
-                font-family: sans-serif;
-            }
-            .p1{
-                color: rgb(25, 0, 255); 
-                font-size: large;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="headline">
-            <h1 id="header">Tim's Kalender</h1>
-            <h1 style=" font-size: large;" >2025</h1>
+        <div id="grid-container">
+            <!-- <div class="popup">
+                <img onclick="picture()" src="sendungen-januar-100~_v-gseagaleriexl.jpg" id="jan-pic" >
+                <span class="popupthing" id="popup1">
+                    <div id="quelle">
+                        <span class="closebtn">&times;</span>
+                        <strong>Quelle:</strong><br> https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planet-wissen.de%2Fsendungen%2Fkalender%2Fzweitausendvierundzwanzig%2Fsendungskalender-januar-118.html&psig=AOvVaw3Bq2nRz-6xiyVyenGkNjas&ust=1737800337924000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjDrvGQjosDFQAAAAAdAAAAABAE
+                    </div>
+                </span>
+            </div> -->
+            <!-- <script>
+            function button(){
+                var popup = document.getElementByClass("popupthing");
+                popup.classList.remove("show");
+            } 
+            </script> -->
+
+            <h1 id="hd">TIM'S KALENDER</h1>
+            <h2 id="year">2025</h2>
+            <div id="month" >Januar</div>
+            <div id="logo">
+                <p class="logoSchrift">LAYER</p>
+                <img src="wir_viere_logo-removebg-preview.png" >
+                <p class="logoSchrift">FOUR</p>
+            </div>
+            <div id="arrowUp">
+                <button id="arrow-up" class="arrow" onKlick="alert('No function, click on OK to get back')">&#11205;</button>
+            </div>
+            <div id="calendar">
+                <table>
+                    <tr>
+
+                        <th class="monday">MO</th>
+                        <th class="weekday">DI</th>
+                        <th class="weekday">MI</th> 
+                        <th class="weekday">DO</th>
+                        <th class="weekday">FR</th>
+                        <th class="weekend">SA</th>
+                        <th class="weekend">SO</th>
+                    </tr>
+                    <tr>
+                        <td class="outOfMonth">30</td>
+                        <td class="outOFMonth2">31</td>
+                        <!-- style="color: blue; background-color:rgba(0, 0, 255, 0.350)" -->
+                        <td class="weekday">1</td>
+                        <td class="secondOfMonth">2</td>
+                        <td class="secondOfMonth">3</td>
+                        <td class="saturdayTD">4</td>
+                        <td class="sundayTD" >5</td>
+                    </tr>
+                    <tr>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                        <td class="content" ></td>
+                    </tr>
+                     <!-- <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div> 
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div>-->
+                     <!-- <div style="color: blue; background-color:rgba(0, 0, 255, 0.350); border-left-style: solid; border-left-color: blue; border-left-width: 4px;">6</div> -->
+                     <tr>
+                         <td class="weekday">6</td>
+                         <td class="weekday">7</td>
+                         <td class="weekday">8</td>
+                         <td class="weekday">9</td>
+                         <td class="weekday">10</td>
+                         <td class="saturdayTD">11</td>
+                         <td class="sundayTD">12</td>
+                         <td style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div> -->
+                    <tr>        
+                        <td class="weekday">13</td>
+                        <td class="weekday">14</td>
+                        <td class="weekday">15</td>
+                        <td class="weekday">16</td>
+                        <td class="weekday">17</td>
+                        <td class="saturdayTD">18</td>
+                        <td class="sundayTD">19</td>
+    	            </tr>
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <div style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div> -->
+                    <tr>
+
+                        <td class="weekday">20</td>
+                        <td class="weekday">21</td>
+                        <td class="weekday">22</td>
+                        <td class="weekday">23</td>
+                        <td class="weekday">24</td>
+                        <td class="saturdayTD">25</td>
+                        <td class="sundayTD">26</td>
+                    </tr> 
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <td style="border-left-style: solid; border-left-color: blue; border-left-width: 4px;"></td> -->
+                     <!-- <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px;"></div> -->
+                     <tr>
+                         <td class="weekday">27</td>
+                         <td class="weekday">28</td>
+                         <td class="weekday">29</td>
+                         <td class="weekday">30</td>
+                         <td class="weekday">31</td>
+                         <td class="outOfMonthSaturday">1</td>
+                         <td class="outOfMonthSunday">2</td>
+                    </tr>
+                    <tr>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                        <td class="content"></td>
+                    </tr>
+                     <!-- <td style="border-left-style: solid; border-left-color: blue; border-left-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></td> -->
+                     <!-- <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>
+                     <div style="border-right-style: solid; border-right-color: blue; border-right-width: 4px; border-bottom-style: solid; border-bottom-color: blue; border-bottom-width: 4px;"></div>                 </div> -->
+                </table>
+            </div>
+          
+            <div id="arrowDown" >
+                <button id="arrow-down" class="arrow" onclick="buttonDown()">&#11206;</button>
+            </div>
+            <div id="todo"></div>
+            
         </div>
-        <div >
-            <p >
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam <span> nonumy eirmod tempor invidunt</span> ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata<br><br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata<br><br><br>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>
-           
-            <p style= "font-size:larger;">
-                Januar
-            </p>
-
-            <p class="p1">
-                icu ufibpj
-            </p>
-
-
-            <h2 class="p1">
-                öihöo
-            </h2>
-            <h2 style="color: rgb(145, 76, 76); font-size: small;">
-                öihöo
-            </h2>
-        </div>
+        <!-- <button id="arrow-down" class="arrow" onclick="alert('No function, click on OK to get back')">&#11206;</button> -->
+        <script type="text/javascript" src="funtcion.js"></script>
     </body>
 </html>
+
+<!-- oncontextmenu="return false" -->

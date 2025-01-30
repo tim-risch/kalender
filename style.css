@@ -1,3 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Rock+Salt&family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+
+
 body{
     background-color: black;
+}
+/* #quelle{
+    font-family: Goldman; 
+    position: relative; 
+    left: 0.7cm; 
+    z-index: 1; 
+    background-color: #3936f47a; 
+    width: 49cm; 
+    height: 2cm;
+} */
+
+/* ____________________________ID'S_______________________________________ */
+#todo{
+    grid-area: 'todo';
+}
+
+#logo{
+    grid-area: 'logo';
+}
+h1{
+    color: rgb(0, 0, 255);
+    font-family: "Goldman", Helvetica, sans-serif;
+    font-size: 1.3cm;
+   /*position: absolute;*/
+   /* top: 15px; */
+   /* left: 2cm; */
+}
+#year{
+    grid-area: 'year';
+    color: rgb(0, 0, 255);
+    font-family: "Goldman", Helvetica, sans-serif;
+    font-size: 1cm;
+    /*position: absolute;*/
+    /* top: 80px; */
+    /* left: 2cm; */
+}
+#month{
+    color:blue;
+    grid-area: 'month';
+    font-family: "Goldman", Helvetica, sans-serif;
+    font-size: 0.8cm;
+    /*position: absolute;*/
+    /* top: 57.5px; */
+    /* left: 17.56cm; */
+    /* width:4.5cm;  */
+    background-color: rgba(0, 0, 255, 0.350); 
+    border-left-style:solid; 
+    border-left-color:blue; 
+    border-left-width: 4px; 
+    text-align: center;
+}
+.logoSchrift{
+    color: rgb(0, 0, 255);
+    font-family: "Goldman", Helvetica, sans-serif;
+    font-size: 0.65cm;
+    /*position: absolute;*/
+    /* right: 4.55cm; */
+    /* bottom: 0cm; */
+}
+/*
+#jan-pic{
+    height: 275px;
+    position: absolute;*/
+    /* top: 200px; */
+    /* left: 2cm; */
+    /* border-width: 5px;
+    border-style: solid;
+    border-left-color: blue;
+    border-top-color: blue;
+    border-right-color: red;
+    border-bottom-color: red; 
+}
+*/
+/* 
+#jan-pic:hover{
+    border-color: rgba(128, 128, 128, 0.281);
+    transition-duration: 0.2s;
+    height: 277px; */
+    /*position: absolute;*/
+    /* left: 1.95cm; */
+    /* top: 199px; 
+}
+
+ #jan-pic:active{
+    height: 277px;
+    position: absolute;*/
+    /* left: 1.98cm; */
+    /* top: 198px; 
+} */
+/* #lf-pic{
+    height: 50px;
+    /*position: absolute;*/
+    /* bottom: 0.36cm;
+    right: 3.25cm; 
+} */
+
+#arrowDown{
+    grid-area: 'arrowDown';
+}
+#arrowUp{
+    grid-area: 'arrowUp';
+    
+}
+/* #arrow-up{ */
+    /* position:absolute; */
+    /* top: 20px; */
+    /* right: 16.83cm; */
+/* } */
+/* #arrow-up:active {
+    transform: translateY(-4px);
+    transition-duration: 0.1s;
+} */
+/* #arrow-down{
+    position:absolute;
+    bottom: 20px;
+    right: 16.83cm;
+} */
+/* #arrow-down:active {
+    transform: translateY(4px);
+    transition-duration: 0.1s;
+} */
+#hd{
+    grid-area: 'hd';
+}
+
+#calendar{
+    grid-area: 'calendar';
+    display: flex;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns:  20%,20%,20%,20%,20%;
+    /* grid-template-columns: 12.5%,12.5%,12.5%,12.5%,12.5%,12.5%,12.5%,12.5%; */
+    /* width: 95vw;
+    height: 95vh; */
+    grid-template-areas:
+        "hd  month arrowUp arrowUp"
+        "year   calendar calendar calendar"
+        "image   calendar calendar calendar"
+        "image  calendar calendar calendar"
+        "todo   calendar calendar calendar"
+        "todo   calendar calendar calendar"
+        "todo   arrowDown arrowDown  logo";
+        padding: 10px;
+        gap: 10px;
+    /* height: 17.5cm;
+    width: 31cm; */
+    /* /*position: absolute;*/ 
+    /* right: 2cm; */
+    /* bottom: 3.995cm; */
+    /* grid-template-columns: auto auto auto auto auto auto auto; */
+    /* grid-template-rows: 37px 37px 95.57px 37px 95.57px 37px 95.57px 37px 95.57px 37px 95.57px; */
+}
+
+/* __________________________CLASS____________________________________________________ */
+.content{
+    width: 37;
+    height: 100;
+    background-color:green;
+}
+.weekday{
+    color: blue; 
+    border-top-style: solid; 
+    border-top-color:blue; 
+    border-top-width: 4px; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.outOfMonth{
+    color: #376497; 
+    border-left-style: solid; 
+    border-left-color: blue; 
+    border-left-width: 4px; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.outOFMonth2{
+    color: #376497; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.secondOfMonth{
+    color: blue; 
+    background-color:rgba(0, 0, 255, 0.350)
+}
+.saturdayTD{
+    color: red; 
+    background-color:rgba(0, 0, 255, 0.350);
+}
+.outOfMonthSaturday{
+    color: #854C4C; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.outOfMonthSunday{
+    color: #854C4C; 
+    border-right-style: solid; 
+    border-right-color: blue; 
+    border-right-width: 4px; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.sundayTD{
+    color: red; 
+    background-color:rgba(0, 0, 255, 0.350); 
+    border-right-style: solid; 
+    border-right-color: blue; 
+    border-right-width: 4px;
+}
+.weekend{
+    color: red; 
+    border-top-style: solid; 
+    border-top-color:blue; 
+    border-top-width: 4px; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.monday{
+    color: blue; 
+    border-top-style: solid; 
+    border-top-color:blue; 
+    border-top-width: 4px; 
+    border-left-style: solid; 
+    border-left-color: blue; 
+    border-left-width: 4px; 
+    background-color: rgba(0, 0, 0, 0);
+}
+.arrow:hover{
+    background-color: rgba(128, 128, 128, 0.281);
+    border-radius: 25px;
+    transition-duration: 0.25s;
+}
+.arrow:active {
+    color: red;
+    transition-duration: 0s;
+}
+.arrow{
+    font-size: 75px;
+    background-color: transparent;
+    border: none;
+    color:blue;
+}
+.grid-container > div{
+    border-style: solid;
+    border-color:blue;
+    border-width: 4px;
+    text-align: center;
+    padding: 0px 0;
+    font-size: 30px;
+    font-family:"Goldman";
+}
+.grid-container > div:hover{
+    transition-duration: 0.075s;
+    background-color:rgba(128, 128, 128, 0.281)
+}
+
+.popup .popupthing{
+    padding: 20px;
+    color: white;
+    visibility: hidden;
+}
+.popup .show {
+    visibility: visible;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.closebtn:hover {
+    color: rgb(255, 0, 0);
 }
